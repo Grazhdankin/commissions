@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: commissions
+  jackson:
+    default-property-inclusion: NON_NULL
+    serialization:
+      INDENT_OUTPUT: true
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+    mapper:
+      default-view-inclusion: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/commissions
+  flyway:
+    baseline-on-migrate: true
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+app:
+  currency-rates-client:
+    url: https://api.exchangerate.host

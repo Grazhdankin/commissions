@@ -9,5 +9,4 @@ class CommissionsApplicationTests {
     @Test
     fun contextLoads() {
     }
-
 }
